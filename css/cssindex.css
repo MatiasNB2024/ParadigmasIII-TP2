@@ -1,0 +1,103 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Para mantener la barra de navegación en la parte superior */
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/pexels-photo-4483610.jpeg'); /* Imagen de fondo */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Estilos de la barra de navegación */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 191, 255, 0.7); /* Fondo semitransparente */
+    padding: 10px 0;
+    z-index: 10; /* Asegura que la barra de navegación esté encima del contenido */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em; /* Tamaño de fuente relativo */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del contenido principal */
+.content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 90%; /* Máximo ancho para ser responsivo */
+    text-align: center;
+    border: 7px solid #00BFFF;
+    z-index: 5; /* Asegura que el contenido esté encima de la imagen de fondo */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em; /* Tamaño de fuente relativo */
+}
+
+p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.2em; /* Tamaño de fuente relativo */
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em; /* Tamaño de fuente relativo */
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 600px) {
+    .content {
+        padding: 15px; /* Menor padding en pantallas más pequeñas */
+    }
+    h1 {
+        font-size: 1.5em; /* Ajusta el tamaño de la fuente del encabezado */
+    }
+    p {
+        font-size: 1em; /* Ajusta el tamaño de la fuente del párrafo */
+    }
+    nav ul li a {
+        font-size: 1em; /* Ajusta el tamaño de la fuente de los enlaces */
+    }
+}
